@@ -1,6 +1,6 @@
-import Collumns from "./components/Columns";
-import * as S from "./styles";
-import { SearchBar } from "./components/Searchbar";
+import Collumns from './components/Columns'
+import * as S from './styles'
+import { SearchBar } from './components/Searchbar'
 
 const DashboardPage = () => {
   return (
@@ -8,6 +8,6 @@ const DashboardPage = () => {
       <SearchBar />
       <Collumns registrations={[]} />
     </S.Container>
-  );
-};
-export default DashboardPage;
+  )
+}
+export default DashboardPage

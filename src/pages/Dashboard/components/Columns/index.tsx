@@ -1,16 +1,15 @@
-
-import * as S from "./styles";
-import RegistrationCard from "../RegistrationCard";
+import * as S from './styles'
+import RegistrationCard from '../RegistrationCard'
 
 const allColumns = [
-  { status: 'REVIEW', title: "Pronto para revisar" },
-  { status: 'APPROVED', title: "Aprovado" },
-  { status: 'REPROVED', title: "Reprovado" },
-];
+  { status: 'REVIEW', title: 'Pronto para revisar' },
+  { status: 'APPROVED', title: 'Aprovado' },
+  { status: 'REPROVED', title: 'Reprovado' },
+]
 
 type Props = {
-  registrations?: any[];
-};
+  registrations?: any[]
+}
 const Collumns = (props: Props) => {
   return (
     <S.Container>
@@ -28,14 +27,14 @@ const Collumns = (props: Props) => {
                       data={registration}
                       key={registration.id}
                     />
-                  );
+                  )
                 })}
               </S.CollumContent>
             </>
           </S.Column>
-        );
+        )
       })}
     </S.Container>
-  );
-};
-export default Collumns;
+  )
+}
+export default Collumns

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Button = styled.button`
   outline: none;
@@ -14,11 +14,11 @@ const Button = styled.button`
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   font-size: 16px;
   font-weight: 600;
-`;
+`
 
 export const ButtonSmall = styled.button<{
-  bgcolor?: string;
-  color?: string;
+  bgcolor?: string
+  color?: string
 }>`
   font-size: 12px;
   outline: none;
@@ -26,9 +26,8 @@ export const ButtonSmall = styled.button<{
   border: none;
   padding: 4px 16px;
   background-color: ${(props) => props.bgcolor ?? 'none'};
-  color: ${(props) => props.color ?? "#000"};
+  color: ${(props) => props.color ?? '#000'};
   cursor: pointer;
-`;
+`
 
-
-export default Button;
+export default Button

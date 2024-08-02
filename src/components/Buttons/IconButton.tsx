@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const _IconButtonStyled = styled.button`
   cursor: pointer;
@@ -13,16 +13,12 @@ export const _IconButtonStyled = styled.button`
   svg {
     color: #64a98c;
   }
-`;
+`
 
 type IconButtonProps = {
-  children?: React.ReactNode;
-} & React.HTMLAttributes<HTMLButtonElement>;
+  children?: React.ReactNode
+} & React.HTMLAttributes<HTMLButtonElement>
 
 export const IconButton = (props: IconButtonProps) => {
-  return (
-    <_IconButtonStyled {...props}>
-      {props.children}
-    </_IconButtonStyled>
-  );
-};
+  return <_IconButtonStyled {...props}>{props.children}</_IconButtonStyled>
+}

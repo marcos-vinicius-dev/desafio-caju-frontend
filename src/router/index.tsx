@@ -1,7 +1,7 @@
-import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
-import routes from "./routes";
-import DashboardPage from "~/pages/Dashboard";
-import NewUserPage from "~/pages/NewUser";
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
+import routes from './routes'
+import DashboardPage from '~/pages/Dashboard'
+import NewUserPage from '~/pages/NewUser'
 
 const Router = () => {
   return (
@@ -16,13 +16,13 @@ const Router = () => {
             component={() => <div>History</div>}
           />
 
-          <Route exact path="*">
+          <Route exact path='*'>
             <Redirect to={routes.dashboard} />
           </Route>
         </Switch>
       </HashRouter>
     </div>
-  );
-};
+  )
+}
 
-export default Router;
+export default Router

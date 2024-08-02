@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Header = styled.header`
   background: rgb(255, 117, 0);
@@ -13,10 +13,10 @@ export const Header = styled.header`
   top: 0;
   display: flex;
   align-items: center;
-  padding:0px 24px;
+  padding: 0px 24px;
 
   h1 {
     color: #fff;
     font-size: 24px;
   }
-`;
+`
