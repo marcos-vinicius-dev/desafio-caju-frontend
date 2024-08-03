@@ -1,15 +1,16 @@
 import { HiRefresh } from 'react-icons/hi'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Button from '~/components/Buttons'
 import { IconButton } from '~/components/Buttons/IconButton'
 import TextField from '~/components/TextField'
 import routes from '~/router/routes'
 import * as S from './styles'
+
 export const SearchBar = () => {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const goToNewAdmissionPage = () => {
-    history.push(routes.newUser)
+    navigate(routes.newUser)
   }
 
   return (
