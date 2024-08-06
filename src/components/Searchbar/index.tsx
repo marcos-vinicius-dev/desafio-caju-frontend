@@ -5,15 +5,17 @@ import TextField from '~/components/ui/TextField'
 import { cpfMask } from '~/utils/masks'
 import { clearCPF } from '~/utils/validateCPF'
 
-export const SearchBar = () => {
+export default function SearchBar() {
   const [searchParams, setSearchParams] = useSearchParams()
   const location = useLocation()
+
   const navigate = useNavigate()
   const [cpf, setCpf] = useState<string>('')
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search)
     const cpfFromQuery: string = queryParams.get('cpf') || ''
+
     setCpf(cpfFromQuery)
   }, [location.search])
 

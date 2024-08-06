@@ -1,5 +1,4 @@
 import * as S from './styles'
-import { SearchBar } from '../../components/Searchbar'
 import { ConfirmModalProvider } from '~/context/ConfirmModalContext'
 import Collumns from '~/components/Columns'
 import { HiRefresh } from 'react-icons/hi'
@@ -13,6 +12,7 @@ import {
   DashboardProvider,
   useDashboardContext,
 } from '~/context/DashboardContext'
+import SearchBar from '~/components/Searchbar'
 
 const Page = () => {
   const navigate = useNavigate()
