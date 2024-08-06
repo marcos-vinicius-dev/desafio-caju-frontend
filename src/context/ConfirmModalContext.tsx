@@ -1,6 +1,6 @@
 import { createContext, useState, ReactNode } from 'react'
 import { ButtonSmall } from '~/components/ui/Buttons'
-import Modal from '~/components/ConfirmModal'
+import ConfirmModal from '~/components/ConfirmModal'
 
 type ConfirmModalContextProps = {
   showConfirm: (message: string, onConfirm: () => void) => void
@@ -39,7 +39,7 @@ export const ConfirmModalProvider = ({
   return (
     <ConfirmModalContext.Provider value={{ showConfirm }}>
       {children}
-      <Modal
+      <ConfirmModal
         show={isVisible}
         onClose={handleCancel}
         title='Confirmação'
@@ -57,7 +57,7 @@ export const ConfirmModalProvider = ({
         }
       >
         {message}
-      </Modal>
+      </ConfirmModal>
     </ConfirmModalContext.Provider>
   )
 }

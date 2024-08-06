@@ -8,7 +8,13 @@ type ModalProps = {
   actions?: React.ReactNode
 }
 
-export function Modal({ show, onClose, title, children, actions }: ModalProps) {
+export default function ConfirmModal({
+  show,
+  onClose,
+  title,
+  children,
+  actions,
+}: ModalProps) {
   if (!show) return null
 
   return (
