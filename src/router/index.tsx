@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import routes from './routes'
 import DashboardPage from '~/pages/Dashboard'
-import NewEmployeePage from '~/pages/Employee'
+import NewEmployeePage from '~/pages/NewEmployee'
 
 const Router = () => {
   return (
