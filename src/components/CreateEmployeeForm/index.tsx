@@ -15,6 +15,7 @@ import EmployeeFormData from '~/entities/Employee'
 import { useNavigate } from 'react-router-dom'
 import routes from '~/router/routes'
 import { cpfMask } from '~/utils/masks'
+import toast from 'react-hot-toast'
 
 export const userSchema = z.object({
   name: z
@@ -42,6 +43,8 @@ export const userSchema = z.object({
     }),
   admissionDate: z.string().min(1, 'Data de admissão é obrigatória'),
 })
+
+const notify = (msg: string) => toast(msg)
 
 const CreateEmployeeForm = () => {
   const {
@@ -77,9 +80,11 @@ const CreateEmployeeForm = () => {
       const createRegistration = new CreateRegistration(registrationsGateway)
       await createRegistration.execute(transformedData)
 
+      notify('Registro cadastrado com suceeso')
+
       goToHome()
     } catch (err) {
-      console.error(err)
+      notify('Erro ao cadastrar Registro')
     }
   }
 

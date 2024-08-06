@@ -33,7 +33,7 @@ describe('ButtonSmall', () => {
   })
 
   test('renders ButtonSmall with custom background color', () => {
-    render(<ButtonSmall bgcolor='blue'>Small Button</ButtonSmall>)
+    render(<ButtonSmall $bgcolor='blue'>Small Button</ButtonSmall>)
     const buttonElement = screen.getByText(/Small Button/i)
     expect(buttonElement).toBeInTheDocument()
     expect(buttonElement).toHaveStyle('background-color: blue')
