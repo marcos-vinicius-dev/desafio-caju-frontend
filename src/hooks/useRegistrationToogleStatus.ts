@@ -22,7 +22,7 @@ const useRegistrationToogleStatus = () => {
         console.error('Erro ao atualizar status:', error)
       }
     },
-    [registrationsGateway]
+    [registrationsGateway, refetch]
   )
 
   const reprove = useCallback(
