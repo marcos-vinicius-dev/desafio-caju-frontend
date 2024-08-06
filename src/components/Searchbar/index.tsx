@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
-import { useDebouncedCallback } from 'use-debounce'
 import TextField from '~/components/ui/TextField'
 
 import { cpfMask } from '~/utils/masks'
@@ -18,7 +17,7 @@ export const SearchBar = () => {
     setCpf(cpfFromQuery)
   }, [location.search])
 
-  const handleSearch = useDebouncedCallback((term) => {
+  const handleSearch = (term: string) => {
     const params = new URLSearchParams(searchParams)
     if (term) {
       params.set('cpf', clearCPF(term))
@@ -26,8 +25,9 @@ export const SearchBar = () => {
       params.delete('cpf')
     }
     setSearchParams(params)
+
     navigate(`${location.pathname}?${params.toString()}`)
-  }, 600)
+  }
 
   return (
     <TextField
