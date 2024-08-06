@@ -47,7 +47,7 @@ export const ConfirmModalProvider = ({
           <div className='flex gap-4'>
             <ButtonSmall onClick={handleCancel}>Não</ButtonSmall>
             <ButtonSmall
-              bgcolor='#e80537'
+              $bgcolor='#e80537'
               color='white'
               onClick={handleConfirm}
             >

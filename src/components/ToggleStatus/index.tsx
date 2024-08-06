@@ -40,10 +40,10 @@ export function ToggleStatus({ status, registrationId }: Props) {
     case 'REVIEW':
       return (
         <>
-          <ButtonSmall bgcolor={colors.reprove} onClick={handleReprove}>
+          <ButtonSmall $bgcolor={colors.reprove} onClick={handleReprove}>
             Reprovar
           </ButtonSmall>
-          <ButtonSmall bgcolor={colors.approve} onClick={handleApprove}>
+          <ButtonSmall $bgcolor={colors.approve} onClick={handleApprove}>
             Aprovar
           </ButtonSmall>
         </>
@@ -52,7 +52,7 @@ export function ToggleStatus({ status, registrationId }: Props) {
     case 'APPROVED':
       return (
         <>
-          <ButtonSmall bgcolor={colors.review} onClick={handleReview}>
+          <ButtonSmall $bgcolor={colors.review} onClick={handleReview}>
             Revisar novamente
           </ButtonSmall>
         </>
