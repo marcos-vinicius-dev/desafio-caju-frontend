@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import routes from './routes'
 import DashboardPage from '~/pages/Dashboard'
-import NewUserPage from '~/pages/NewUser'
+import NewEmployeePage from '~/pages/Employee'
 
 const Router = () => {
   return (
@@ -9,7 +9,7 @@ const Router = () => {
       <HashRouter>
         <Routes>
           <Route path={routes.dashboard} element={<DashboardPage />} />
-          <Route path={routes.newUser} element={<NewUserPage />} />
+          <Route path={routes.newUser} element={<NewEmployeePage />} />
           <Route path='*' element={<Navigate to={routes.dashboard} />} />
         </Routes>
       </HashRouter>
