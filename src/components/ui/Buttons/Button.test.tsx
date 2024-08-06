@@ -1,27 +1,27 @@
 import { render, screen } from '@testing-library/react'
-import { ButtonSmall } from './index'
+import Button, { ButtonSmall } from './index'
 
-// describe('Button', () => {
-//   test('renders Button with default styles', () => {
-//     render(<Button>Click Me</Button>)
-//     const buttonElement = screen.getByText(/Click Me/i)
-//     expect(buttonElement).toBeInTheDocument()
-//     expect(buttonElement).toHaveStyle('background-color: #64a98c')
-//     expect(buttonElement).toHaveStyle('font-size: 16px')
-//   })
+describe('Button', () => {
+  test('renders Button with default styles', () => {
+    render(<Button>Click Me</Button>)
+    const buttonElement = screen.getByText(/Click Me/i)
+    expect(buttonElement).toBeInTheDocument()
+    expect(buttonElement).toHaveStyle('background-color: #64a98c')
+    expect(buttonElement).toHaveStyle('font-size: 16px')
+  })
 
-//   test('renders Button with correct styles when passed as props', () => {
-//     render(
-//       <Button style={{ backgroundColor: 'red', color: 'black' }}>
-//         Click Me
-//       </Button>
-//     )
-//     const buttonElement = screen.getByText(/Click Me/i)
-//     expect(buttonElement).toBeInTheDocument()
-//     expect(buttonElement).toHaveStyle('background-color: red')
-//     expect(buttonElement).toHaveStyle('color: black')
-//   })
-// })
+  test('renders Button with correct styles when passed as props', () => {
+    render(
+      <Button style={{ backgroundColor: 'red', color: 'black' }}>
+        Click Me
+      </Button>
+    )
+    const buttonElement = screen.getByText(/Click Me/i)
+    expect(buttonElement).toBeInTheDocument()
+    expect(buttonElement).toHaveStyle('background-color: red')
+    expect(buttonElement).toHaveStyle('color: black')
+  })
+})
 
 describe('ButtonSmall', () => {
   test('renders ButtonSmall with default styles', () => {
